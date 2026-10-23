@@ -1,0 +1,109 @@
+<svg width="1200" height="750" viewBox="0 0 1200 750" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="1200" height="750" fill="#F4F3EE"/>
+  
+  <!-- Browser Chrome / Window Header -->
+  <rect x="0" y="0" width="1200" height="48" fill="#FFFFFF"/>
+  <line x1="0" y1="48" x2="1200" y2="48" stroke="#DEDED6" stroke-width="1"/>
+  <circle cx="28" cy="24" r="5" fill="#E26D5C"/>
+  <circle cx="44" cy="24" r="5" fill="#F4B266"/>
+  <circle cx="60" cy="24" r="5" fill="#67B99A"/>
+  <rect x="90" y="12" width="460" height="24" rx="4" fill="#F7F6F2" stroke="#DEDED6" stroke-width="1"/>
+  <text x="105" y="28" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="11" fill="#73756D">budgetbuddy.finance.app/analytics/overview</text>
+
+  <!-- App Header -->
+  <rect x="0" y="49" width="1200" height="64" fill="#FFFFFF"/>
+  <line x1="0" y1="113" x2="1200" y2="113" stroke="#DEDED6" stroke-width="1"/>
+  
+  <text x="36" y="87" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="18" font-weight="700" fill="#252721">BudgetBuddy</text>
+  <rect x="175" y="74" width="120" height="20" rx="3" fill="#E9EEE7"/>
+  <text x="185" y="88" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="11" font-weight="600" fill="#526B56">EXPENSE TRACKER</text>
+
+  <text x="340" y="86" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="13" font-weight="600" fill="#252721">Dashboard</text>
+  <text x="450" y="86" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="13" fill="#73756D">All Transactions</text>
+  <text x="590" y="86" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="13" fill="#73756D">Beneficiaries &amp; Loans</text>
+  <text x="760" y="86" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="13" fill="#73756D">Monthly Reports</text>
+
+  <rect x="1030" y="66" width="134" height="32" rx="4" fill="#526B56"/>
+  <text x="1050" y="86" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="12" font-weight="600" fill="#FFFFFF">+ Add Transaction</text>
+
+  <!-- Top Metrics Bar -->
+  <rect x="36" y="135" width="260" height="95" rx="4" fill="#FFFFFF" stroke="#DEDED6" stroke-width="1"/>
+  <text x="56" y="165" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="12" font-weight="600" fill="#73756D">MONTHLY BUDGET POOL</text>
+  <text x="56" y="200" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="26" font-weight="700" fill="#252721">$4,800.00</text>
+  <text x="190" y="198" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="11" fill="#526B56">Active Period</text>
+
+  <rect x="320" y="135" width="260" height="95" rx="4" fill="#FFFFFF" stroke="#DEDED6" stroke-width="1"/>
+  <text x="340" y="165" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="12" font-weight="600" fill="#73756D">TOTAL SPENT TO DATE</text>
+  <text x="340" y="200" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="26" font-weight="700" fill="#252721">$2,940.50</text>
+  <text x="475" y="198" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="11" fill="#73756D">61.2% Allocated</text>
+
+  <rect x="604" y="135" width="260" height="95" rx="4" fill="#FFFFFF" stroke="#DEDED6" stroke-width="1"/>
+  <text x="624" y="165" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="12" font-weight="600" fill="#73756D">REMAINING SURPLUS</text>
+  <text x="624" y="200" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="26" font-weight="700" fill="#526B56">$1,859.50</text>
+  <text x="750" y="198" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="11" fill="#526B56">Healthy Pace</text>
+
+  <rect x="888" y="135" width="276" height="95" rx="4" fill="#FFFFFF" stroke="#DEDED6" stroke-width="1"/>
+  <text x="908" y="165" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="12" font-weight="600" fill="#73756D">TOP EXPENSE CATEGORY</text>
+  <text x="908" y="200" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="22" font-weight="700" fill="#252721">Housing &amp; Util</text>
+  <text x="1060" y="198" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="11" fill="#73756D">$1,450.00</text>
+
+  <!-- Left Chart Panel (MUI Charts Simulation) -->
+  <rect x="36" y="250" width="544" height="460" rx="4" fill="#FFFFFF" stroke="#DEDED6" stroke-width="1"/>
+  <text x="60" y="285" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="14" font-weight="700" fill="#252721">Daily Burn Rate &amp; Spending Curve</text>
+  <text x="60" y="305" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="11" fill="#73756D">Visualized using Material UI Charts with daily running total calculation</text>
+  
+  <!-- Line Chart Simulation -->
+  <line x1="60" y1="520" x2="540" y2="520" stroke="#E5E5DF" stroke-width="1"/>
+  <line x1="60" y1="440" x2="540" y2="440" stroke="#E5E5DF" stroke-width="1" stroke-dasharray="4 4"/>
+  <line x1="60" y1="360" x2="540" y2="360" stroke="#E5E5DF" stroke-width="1" stroke-dasharray="4 4"/>
+  
+  <text x="548" y="524" font-family="monospace" font-size="10" fill="#73756D">$0</text>
+  <text x="548" y="444" font-family="monospace" font-size="10" fill="#73756D">$2k</text>
+  <text x="548" y="364" font-family="monospace" font-size="10" fill="#73756D">$4k</text>
+
+  <!-- Area under curve -->
+  <path d="M 80 500 L 140 480 L 200 460 L 260 450 L 320 420 L 380 400 L 440 380 L 500 370 L 500 520 L 80 520 Z" fill="#E9EEE7" opacity="0.6"/>
+  <path d="M 80 500 L 140 480 L 200 460 L 260 450 L 320 420 L 380 400 L 440 380 L 500 370" stroke="#526B56" stroke-width="3" fill="none"/>
+  
+  <circle cx="500" cy="370" r="5" fill="#526B56"/>
+  <rect x="420" y="325" width="110" height="32" rx="3" fill="#252721"/>
+  <text x="432" y="346" font-family="monospace" font-size="11" font-weight="600" fill="#FFFFFF">Day 23: $2,940</text>
+
+  <rect x="60" y="560" width="480" height="120" rx="4" fill="#F7F6F2" stroke="#DEDED6" stroke-width="1"/>
+  <text x="80" y="590" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="12" font-weight="600" fill="#252721">Spending Velocity Analysis</text>
+  <text x="80" y="612" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="11" fill="#73756D">Current run rate projects an end-of-month surplus of $420.00.</text>
+  <text x="80" y="632" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="11" fill="#73756D">Transactions mapped via Axios interceptors and filtered client-side with memoization.</text>
+
+  <!-- Right Table Panel -->
+  <rect x="604" y="250" width="560" height="460" rx="4" fill="#FFFFFF" stroke="#DEDED6" stroke-width="1"/>
+  <text x="628" y="285" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="14" font-weight="700" fill="#252721">Recent Verified Transactions</text>
+  
+  <!-- Row 1 -->
+  <text x="628" y="330" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="13" font-weight="600" fill="#252721">Fiber Broadband &amp; Cloud Subscription</text>
+  <text x="628" y="346" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="11" fill="#73756D">Utilities · Auto-debit · Today, 10:14 AM</text>
+  <text x="1080" y="338" font-family="monospace" font-size="13" font-weight="700" fill="#252721">-$84.99</text>
+  <line x1="628" y1="365" x2="1140" y2="365" stroke="#F0EFEA" stroke-width="1"/>
+
+  <!-- Row 2 -->
+  <text x="628" y="400" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="13" font-weight="600" fill="#252721">Organic Market Groceries</text>
+  <text x="628" y="416" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="11" fill="#73756D">Food &amp; Dining · Debit card · Oct 22</text>
+  <text x="1075" y="408" font-family="monospace" font-size="13" font-weight="700" fill="#252721">-$142.10</text>
+  <line x1="628" y1="435" x2="1140" y2="435" stroke="#F0EFEA" stroke-width="1"/>
+
+  <!-- Row 3 -->
+  <text x="628" y="470" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="13" font-weight="600" fill="#252721">Consulting Retainer Milestone 2</text>
+  <text x="628" y="486" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="11" fill="#526B56">Income Credit · Wire transfer · Oct 20</text>
+  <text x="1065" y="478" font-family="monospace" font-size="13" font-weight="700" fill="#526B56">+$1,250.00</text>
+  <line x1="628" y1="505" x2="1140" y2="505" stroke="#F0EFEA" stroke-width="1"/>
+
+  <!-- Row 4 -->
+  <text x="628" y="540" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="13" font-weight="600" fill="#252721">Quarterly Medical Insurance Premium</text>
+  <text x="628" y="556" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="11" fill="#73756D">Healthcare · ACH · Oct 18</text>
+  <text x="1075" y="548" font-family="monospace" font-size="13" font-weight="700" fill="#252721">-$310.00</text>
+  <line x1="628" y1="575" x2="1140" y2="575" stroke="#F0EFEA" stroke-width="1"/>
+
+  <!-- JSON Server Sync Banner -->
+  <rect x="628" y="605" width="512" height="75" rx="3" fill="#FAF9F5" stroke="#DEDED6" stroke-width="1"/>
+  <text x="648" y="632" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="12" font-weight="600" fill="#252721">Local Mock API &amp; State Persistence</text>
+  <text x="648" y="652" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="11" fill="#73756D">JSON Server REST endpoints synced with client-side optimistic mutations</text>
+</svg>

@@ -1,0 +1,156 @@
+<svg width="1200" height="750" viewBox="0 0 1200 750" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="1200" height="750" fill="#F4F3EE"/>
+  
+  <!-- Browser Chrome / App Window Bar -->
+  <rect x="0" y="0" width="1200" height="48" fill="#FFFFFF"/>
+  <line x1="0" y1="48" x2="1200" y2="48" stroke="#DEDED6" stroke-width="1"/>
+  <circle cx="28" cy="24" r="5" fill="#E26D5C"/>
+  <circle cx="44" cy="24" r="5" fill="#F4B266"/>
+  <circle cx="60" cy="24" r="5" fill="#67B99A"/>
+  <rect x="90" y="12" width="480" height="24" rx="4" fill="#F7F6F2" stroke="#DEDED6" stroke-width="1"/>
+  <text x="105" y="28" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="11" fill="#73756D">workhub.marketplace.internal/dashboard/jobs/manage</text>
+
+  <!-- App Header -->
+  <rect x="0" y="49" width="1200" height="64" fill="#FFFFFF"/>
+  <line x1="0" y1="113" x2="1200" y2="113" stroke="#DEDED6" stroke-width="1"/>
+  
+  <text x="36" y="87" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="18" font-weight="700" fill="#252721">WorkHub</text>
+  <rect x="122" y="74" width="70" height="20" rx="3" fill="#E9EEE7"/>
+  <text x="130" y="88" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="11" font-weight="600" fill="#526B56">LIVE PROD</text>
+
+  <!-- Nav links -->
+  <text x="240" y="86" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="13" font-weight="600" fill="#252721">Active Listings</text>
+  <rect x="240" y="110" width="85" height="3" fill="#526B56"/>
+  <text x="360" y="86" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="13" fill="#73756D">Applications &amp; Bids (14)</text>
+  <text x="530" y="86" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="13" fill="#73756D">Contractors</text>
+  <text x="640" y="86" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="13" fill="#73756D">Escrow &amp; Payouts</text>
+
+  <!-- Header Right Profile -->
+  <rect x="1030" y="65" width="134" height="34" rx="4" fill="#526B56"/>
+  <text x="1055" y="87" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="12" font-weight="600" fill="#FFFFFF">+ Post New Job</text>
+
+  <!-- Main Workspace Layout (Sidebar + Content) -->
+  <!-- Left Filter Column -->
+  <rect x="36" y="135" width="260" height="575" rx="6" fill="#FFFFFF" stroke="#DEDED6" stroke-width="1"/>
+  <text x="56" y="170" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="14" font-weight="700" fill="#252721">Job Lifecycle Filter</text>
+  <line x1="56" y1="185" x2="276" y2="185" stroke="#E5E5DF" stroke-width="1"/>
+  
+  <rect x="56" y="200" width="220" height="32" rx="4" fill="#E9EEE7"/>
+  <text x="70" y="221" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="12" font-weight="600" fill="#526B56">All Open Listings</text>
+  <text x="250" y="221" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="11" font-weight="600" fill="#526B56">28</text>
+
+  <text x="70" y="258" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="12" fill="#73756D">Pending Client Review</text>
+  <text x="254" y="258" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="11" fill="#73756D">8</text>
+
+  <text x="70" y="295" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="12" fill="#73756D">Active In-Progress</text>
+  <text x="254" y="295" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="11" fill="#73756D">12</text>
+
+  <text x="70" y="332" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="12" fill="#73756D">Completed &amp; Settled</text>
+  <text x="250" y="332" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="11" fill="#73756D">140</text>
+
+  <!-- Trade Category Tags -->
+  <text x="56" y="380" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="13" font-weight="700" fill="#252721">Trade Category</text>
+  
+  <rect x="56" y="398" width="88" height="26" rx="3" fill="#F7F6F2" stroke="#DEDED6" stroke-width="1"/>
+  <text x="68" y="415" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="11" fill="#252721">Electrical</text>
+
+  <rect x="152" y="398" width="84" height="26" rx="3" fill="#F7F6F2" stroke="#DEDED6" stroke-width="1"/>
+  <text x="164" y="415" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="11" fill="#252721">Plumbing</text>
+
+  <rect x="56" y="432" width="102" height="26" rx="3" fill="#F7F6F2" stroke="#DEDED6" stroke-width="1"/>
+  <text x="68" y="449" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="11" fill="#252721">HVAC Install</text>
+
+  <rect x="166" y="432" width="94" height="26" rx="3" fill="#F7F6F2" stroke="#DEDED6" stroke-width="1"/>
+  <text x="178" y="449" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="11" fill="#252721">Carpentry</text>
+
+  <!-- Relational Sync Status Note in sidebar -->
+  <rect x="56" y="560" width="220" height="120" rx="4" fill="#F7F6F2" stroke="#DEDED6" stroke-width="1"/>
+  <text x="70" y="586" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="11" font-weight="700" fill="#252721">Prisma + MySQL Node</text>
+  <text x="70" y="606" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="10" fill="#73756D">ACID Transactions Active</text>
+  <text x="70" y="624" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="10" fill="#73756D">Avg query response: 18ms</text>
+  <circle cx="76" cy="650" r="4" fill="#526B56"/>
+  <text x="88" y="654" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="11" font-weight="600" fill="#526B56">Schema Migrations Synced</text>
+
+  <!-- Right Main Listings Area -->
+  <rect x="318" y="135" width="846" height="575" rx="6" fill="#FFFFFF" stroke="#DEDED6" stroke-width="1"/>
+  
+  <!-- Table Header Bar -->
+  <rect x="319" y="136" width="844" height="48" fill="#FAF9F5"/>
+  <line x1="318" y1="184" x2="1164" y2="184" stroke="#DEDED6" stroke-width="1"/>
+  <text x="340" y="165" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="12" font-weight="600" fill="#73756D">JOB REFERENCE &amp; SCOPE</text>
+  <text x="610" y="165" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="12" font-weight="600" fill="#73756D">POSTED BY</text>
+  <text x="740" y="165" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="12" font-weight="600" fill="#73756D">BIDS RECEIVED</text>
+  <text x="880" y="165" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="12" font-weight="600" fill="#73756D">STATE</text>
+  <text x="1030" y="165" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="12" font-weight="600" fill="#73756D">ACTIONS</text>
+
+  <!-- Row 1: Active In-Progress -->
+  <g>
+    <text x="340" y="218" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="14" font-weight="600" fill="#252721">Commercial Subpanel Rewiring</text>
+    <text x="340" y="236" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="11" fill="#73756D">REF: #WH-8041 · 3-Phase · 200A Service</text>
+    <text x="610" y="222" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="13" fill="#252721">Veritas Commercial</text>
+    <text x="610" y="236" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="11" fill="#73756D">Sector 4, Industrial</text>
+    
+    <text x="740" y="224" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="13" font-weight="600" fill="#252721">6 Verified Bids</text>
+    <text x="740" y="238" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="11" fill="#526B56">Avg quote: $1,420</text>
+
+    <!-- State Pill -->
+    <rect x="880" y="210" width="105" height="24" rx="3" fill="#E9EEE7"/>
+    <text x="892" y="226" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="11" font-weight="600" fill="#526B56">BID ACCEPTED</text>
+
+    <rect x="1030" y="210" width="94" height="26" rx="3" fill="#252721"/>
+    <text x="1046" y="227" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="11" font-weight="600" fill="#FFFFFF">Inspect Job</text>
+    <line x1="320" y1="260" x2="1160" y2="260" stroke="#F0EFEA" stroke-width="1"/>
+  </g>
+
+  <!-- Row 2: Open For Bids -->
+  <g>
+    <text x="340" y="298" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="14" font-weight="600" fill="#252721">HVAC Variable Refrigerant Maintenance</text>
+    <text x="340" y="316" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="11" fill="#73756D">REF: #WH-8039 · Multizone VRF Diagnosis</text>
+    <text x="610" y="302" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="13" fill="#252721">Horizon Tech Hub</text>
+    <text x="610" y="316" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="11" fill="#73756D">Block B Corporate</text>
+    
+    <text x="740" y="304" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="13" font-weight="600" fill="#252721">4 New Quotes</text>
+    <text x="740" y="318" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="11" fill="#73756D">Deadline: In 2 hrs</text>
+
+    <rect x="880" y="290" width="95" height="24" rx="3" fill="#FFF3D6"/>
+    <text x="894" y="306" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="11" font-weight="600" fill="#996500">OPEN BIDS</text>
+
+    <rect x="1030" y="290" width="94" height="26" rx="3" fill="#F7F6F2" stroke="#DEDED6" stroke-width="1"/>
+    <text x="1046" y="307" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="11" font-weight="600" fill="#252721">Review Bids</text>
+    <line x1="320" y1="340" x2="1160" y2="340" stroke="#F0EFEA" stroke-width="1"/>
+  </g>
+
+  <!-- Row 3: Plumbing Inspection -->
+  <g>
+    <text x="340" y="378" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="14" font-weight="600" fill="#252721">Emergency Mainline Backflow Testing</text>
+    <text x="340" y="396" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="11" fill="#73756D">REF: #WH-8034 · Dual Check Assembly</text>
+    <text x="610" y="382" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="13" fill="#252721">Aura Health Complex</text>
+    <text x="610" y="396" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="11" fill="#73756D">Civic Center</text>
+    
+    <text x="740" y="384" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="13" font-weight="600" fill="#252721">Contracted</text>
+    <text x="740" y="398" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="11" fill="#73756D">Worker: Dave Miller</text>
+
+    <rect x="880" y="370" width="96" height="24" rx="3" fill="#EBF2FA"/>
+    <text x="892" y="386" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="11" font-weight="600" fill="#2C5282">IN-PROGRESS</text>
+
+    <rect x="1030" y="370" width="94" height="26" rx="3" fill="#F7F6F2" stroke="#DEDED6" stroke-width="1"/>
+    <text x="1046" y="387" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="11" font-weight="600" fill="#252721">Track Status</text>
+    <line x1="320" y1="420" x2="1160" y2="420" stroke="#F0EFEA" stroke-width="1"/>
+  </g>
+
+  <!-- Drawer Detail Overlay Preview (Simulating atomic transaction drawer) -->
+  <rect x="720" y="445" width="420" height="245" rx="6" fill="#FBFBFA" stroke="#DEDED6" stroke-width="1"/>
+  <rect x="720" y="445" width="420" height="38" rx="6 6 0 0" fill="#252721"/>
+  <text x="740" y="469" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="12" font-weight="600" fill="#FFFFFF">Direct Contractor Assignment · Atomic Lock</text>
+  <text x="740" y="505" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="12" font-weight="600" fill="#252721">Selected Worker: Apex Electrical Solutions</text>
+  <text x="740" y="524" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="11" fill="#73756D">License #EL-994012 · Vetted Rating 4.96/5.0 (42 jobs)</text>
+  
+  <rect x="740" y="542" width="380" height="58" rx="4" fill="#FFFFFF" stroke="#DEDED6" stroke-width="1"/>
+  <text x="755" y="562" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="11" font-weight="600" fill="#526B56">Prisma Transaction Pipeline</text>
+  <text x="755" y="582" font-family="monospace" font-size="10" fill="#252721">prisma.$transaction([updateJobStatus, closeOtherBids])</text>
+
+  <rect x="740" y="618" width="180" height="32" rx="4" fill="#526B56"/>
+  <text x="764" y="638" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="11" font-weight="600" fill="#FFFFFF">Confirm &amp; Lock Contract</text>
+  <rect x="930" y="618" width="80" height="32" rx="4" fill="#F7F6F2" stroke="#DEDED6" stroke-width="1"/>
+  <text x="952" y="638" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="11" fill="#73756D">Cancel</text>
+</svg>

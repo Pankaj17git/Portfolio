@@ -1,0 +1,51 @@
+const fs = require("fs");
+const path = require("path");
+
+const target = path.join(__dirname, "..", "public", "Pankaj_Choudhary_Resume.pdf");
+
+const pdfContent = `%PDF-1.4
+1 0 obj
+<< /Type /Catalog /Pages 2 0 R >>
+endobj
+2 0 obj
+<< /Type /Pages /Kids [3 0 R] /Count 1 >>
+endobj
+3 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 612 792] /Contents 4 0 R /Resources << /Font << /F1 5 0 R >> >> >>
+endobj
+4 0 obj
+<< /Length 260 >>
+stream
+BT
+/F1 18 Tf
+50 720 Td
+(Pankaj Choudhary - Full-Stack Developer) Tj
+/F1 11 Tf
+0 -24 Td
+(1 Year Experience | Kaspro Solutions | MERN, Next.js, Angular, Prisma) Tj
+0 -20 Td
+(Email: pc620042@gmail.com | Phone: +91 88940 57738) Tj
+0 -24 Td
+(See interactive portfolio and live resume at /resume) Tj
+ET
+endstream
+endobj
+5 0 obj
+<< /Type /Font /Subtype /Type1 /BaseFont /Helvetica >>
+endobj
+xref
+0 6
+0000000000 65535 f 
+0000000009 00000 n 
+0000000058 00000 n 
+0000000115 00000 n 
+0000000224 00000 n 
+0000000536 00000 n 
+trailer
+<< /Size 6 /Root 1 0 R >>
+startxref
+609
+%%EOF`;
+
+fs.writeFileSync(target, pdfContent);
+console.log("PDF created successfully at", target);

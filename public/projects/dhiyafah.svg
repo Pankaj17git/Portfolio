@@ -1,0 +1,94 @@
+<svg width="1200" height="750" viewBox="0 0 1200 750" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="1200" height="750" fill="#F4F3EE"/>
+  
+  <!-- Browser Chrome / Window Header -->
+  <rect x="0" y="0" width="1200" height="48" fill="#FFFFFF"/>
+  <line x1="0" y1="48" x2="1200" y2="48" stroke="#DEDED6" stroke-width="1"/>
+  <circle cx="28" cy="24" r="5" fill="#E26D5C"/>
+  <circle cx="44" cy="24" r="5" fill="#F4B266"/>
+  <circle cx="60" cy="24" r="5" fill="#67B99A"/>
+  <rect x="90" y="12" width="460" height="24" rx="4" fill="#F7F6F2" stroke="#DEDED6" stroke-width="1"/>
+  <text x="105" y="28" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="11" fill="#73756D">dhiyafah.workplace-ops.internal/dispatch/concierge</text>
+
+  <!-- Angular App Banner / Top Bar -->
+  <rect x="0" y="49" width="1200" height="64" fill="#252721"/>
+  <text x="36" y="87" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="18" font-weight="700" fill="#FFFFFF">Dhiyafah · Workplace Concierge</text>
+  <rect x="340" y="72" width="115" height="22" rx="3" fill="#383D33"/>
+  <text x="350" y="87" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="11" font-weight="600" fill="#E9EEE7">ANGULAR · RXJS</text>
+
+  <text x="750" y="87" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="13" fill="#DEDED6">Tower A, 8th Floor Ops</text>
+  <circle cx="940" cy="83" r="4" fill="#67B99A"/>
+  <text x="955" y="87" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="12" fill="#E9EEE7">Live Ticket Stream</text>
+
+  <!-- Metric Summary Tiles -->
+  <rect x="36" y="135" width="260" height="100" rx="4" fill="#FFFFFF" stroke="#DEDED6" stroke-width="1"/>
+  <text x="56" y="165" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="12" font-weight="600" fill="#73756D">ACTIVE SLA TICKETS</text>
+  <text x="56" y="202" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="28" font-weight="700" fill="#252721">42</text>
+  <text x="120" y="200" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="12" fill="#526B56">98.4% On Schedule</text>
+
+  <rect x="320" y="135" width="260" height="100" rx="4" fill="#FFFFFF" stroke="#DEDED6" stroke-width="1"/>
+  <text x="340" y="165" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="12" font-weight="600" fill="#73756D">AVG DISPATCH RESOLUTION</text>
+  <text x="340" y="202" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="28" font-weight="700" fill="#252721">24m</text>
+  <text x="410" y="200" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="12" fill="#73756D">Target &lt; 30m</text>
+
+  <rect x="604" y="135" width="260" height="100" rx="4" fill="#FFFFFF" stroke="#DEDED6" stroke-width="1"/>
+  <text x="624" y="165" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="12" font-weight="600" fill="#73756D">FACILITIES ESCALATIONS</text>
+  <text x="624" y="202" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="28" font-weight="700" fill="#526B56">3</text>
+  <text x="660" y="200" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="12" fill="#73756D">Priority 1 assigned</text>
+
+  <rect x="888" y="135" width="276" height="100" rx="4" fill="#FFFFFF" stroke="#DEDED6" stroke-width="1"/>
+  <text x="908" y="165" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="12" font-weight="600" fill="#73756D">DISPATCHERS ON DUTY</text>
+  <text x="908" y="202" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="28" font-weight="700" fill="#252721">14</text>
+  <text x="955" y="200" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="12" fill="#526B56">All Zones Covered</text>
+
+  <!-- Tickets Main Table View -->
+  <rect x="36" y="255" width="1128" height="455" rx="4" fill="#FFFFFF" stroke="#DEDED6" stroke-width="1"/>
+  
+  <rect x="37" y="256" width="1126" height="46" fill="#FAF9F5"/>
+  <line x1="36" y1="302" x2="1164" y2="302" stroke="#DEDED6" stroke-width="1"/>
+  <text x="60" y="284" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="12" font-weight="600" fill="#73756D">TICKET ID</text>
+  <text x="180" y="284" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="12" font-weight="600" fill="#73756D">SERVICE REQUEST</text>
+  <text x="460" y="284" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="12" font-weight="600" fill="#73756D">DEPARTMENT &amp; ZONE</text>
+  <text x="710" y="284" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="12" font-weight="600" fill="#73756D">SLA REMAINING</text>
+  <text x="890" y="284" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="12" font-weight="600" fill="#73756D">STATUS</text>
+  <text x="1040" y="284" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="12" font-weight="600" fill="#73756D">DISPATCH</text>
+
+  <!-- Row 1 -->
+  <text x="60" y="340" font-family="monospace" font-size="12" font-weight="600" fill="#252721">#DHY-4402</text>
+  <text x="180" y="336" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="13" font-weight="600" fill="#252721">Boardroom Conference AV Setup &amp; Audio Check</text>
+  <text x="180" y="354" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="11" fill="#73756D">Executive Meeting · 14 Attendees · VIP Protocol</text>
+  <text x="460" y="340" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="12" fill="#252721">Executive Suite · Fl 14, Rm 1402</text>
+  <text x="710" y="340" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="12" font-weight="600" fill="#E26D5C">12 min (Critical)</text>
+  <rect x="890" y="324" width="86" height="22" rx="3" fill="#FEE2E2"/>
+  <text x="902" y="339" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="11" font-weight="600" fill="#991B1B">DISPATCHED</text>
+  <text x="1040" y="340" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="12" fill="#526B56">A. Sharma</text>
+  <line x1="36" y1="372" x2="1164" y2="372" stroke="#F0EFEA" stroke-width="1"/>
+
+  <!-- Row 2 -->
+  <text x="60" y="410" font-family="monospace" font-size="12" font-weight="600" fill="#252721">#DHY-4398</text>
+  <text x="180" y="406" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="13" font-weight="600" fill="#252721">Ergonomic Desk Sensor Calibration</text>
+  <text x="180" y="424" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="11" fill="#73756D">Facilities Work order · Height adjustment module</text>
+  <text x="460" y="410" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="12" fill="#252721">Product Engineering · Pod 4</text>
+  <text x="710" y="410" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="12" fill="#73756D">45 min</text>
+  <rect x="890" y="394" width="86" height="22" rx="3" fill="#E9EEE7"/>
+  <text x="904" y="409" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="11" font-weight="600" fill="#526B56">ASSIGNED</text>
+  <text x="1040" y="410" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="12" fill="#73756D">K. Verma</text>
+  <line x1="36" y1="442" x2="1164" y2="442" stroke="#F0EFEA" stroke-width="1"/>
+
+  <!-- Row 3 -->
+  <text x="60" y="480" font-family="monospace" font-size="12" font-weight="600" fill="#252721">#DHY-4391</text>
+  <text x="180" y="476" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="13" font-weight="600" fill="#252721">Catering &amp; Refreshment Replenishment</text>
+  <text x="180" y="494" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="11" fill="#73756D">Pantry 3 · Organic roast beans &amp; refrigeration audit</text>
+  <text x="460" y="480" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="12" fill="#252721">Central Amenities · Fl 6</text>
+  <text x="710" y="480" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="12" fill="#73756D">1h 15m</text>
+  <rect x="890" y="464" width="86" height="22" rx="3" fill="#F7F6F2" stroke="#DEDED6" stroke-width="1"/>
+  <text x="906" y="479" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="11" font-weight="600" fill="#73756D">RESOLVED</text>
+  <text x="1040" y="480" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="12" fill="#73756D">Auto-Archived</text>
+  <line x1="36" y1="512" x2="1164" y2="512" stroke="#F0EFEA" stroke-width="1"/>
+
+  <!-- Footer status bar inside dashboard -->
+  <rect x="37" y="660" width="1126" height="49" fill="#FAF9F5"/>
+  <line x1="36" y1="660" x2="1164" y2="660" stroke="#DEDED6" stroke-width="1"/>
+  <text x="60" y="690" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="12" fill="#73756D">Showing 42 active tickets · Angular RxJS Observable pipeline connected</text>
+  <text x="980" y="690" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="12" font-weight="600" fill="#526B56">Auto-refresh: 15s interval</text>
+</svg>
