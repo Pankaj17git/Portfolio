@@ -2,8 +2,9 @@
 
 import React from "react";
 import { portfolioData } from "@/data/portfolioData";
-import { ArrowDown, ArrowUpRight, CheckCircle2, Code2, Database, Layers, Sparkles } from "lucide-react";
+import { ArrowDown, ArrowUpRight, Sparkles } from "lucide-react";
 import AnimatedHeading from "./AnimatedHeading";
+import HeroArchitectureTerminal from "./HeroArchitectureTerminal";
 
 export default function Hero() {
   const { personal } = portfolioData;
@@ -22,152 +23,169 @@ export default function Hero() {
   return (
     <section
       style={{
-        paddingTop: "64px",
+        paddingTop: "60px",
         paddingBottom: "72px",
         borderBottom: "1px solid var(--border-color)",
         position: "relative",
       }}
     >
       <div className="container">
-        <div style={{ maxWidth: "980px" }}>
-          {/* Editorial Category Label */}
-          <div className="editorial-label hero-label-entrance">
-            SOFTWARE DEVELOPER · 1 YEAR OF LIVE PRODUCTION WORK
-          </div>
+        {/* Responsive 2-Column Hero: Story on Left, Live Architecture Terminal on Right */}
+        <div
+          className="hero-grid-layout"
+          style={{
+            display: "grid",
+            gridTemplateColumns: "1fr",
+            gap: "40px",
+            alignItems: "center",
+          }}
+        >
+          {/* Left Column: Headlines, Bio, CTAs, Skills */}
+          <div>
+            {/* Editorial Category Label */}
+            <div className="editorial-label hero-label-entrance">
+              SOFTWARE DEVELOPER · 1 YEAR OF LIVE PRODUCTION WORK
+            </div>
 
-          {/* Main Editorial Headline */}
-          <AnimatedHeading
-            text="Building practical software, from responsive interface to relational database."
-            as="h1"
-            className="hero-headline-entrance"
-            style={{
-              fontSize: "clamp(2.5rem, 5.5vw, 4.25rem)",
-              fontWeight: 800,
-              lineHeight: 1.1,
-              letterSpacing: "-0.035em",
-              color: "var(--text-primary)",
-              marginBottom: "24px",
-            }}
-          />
-
-          {/* Supporting Bio Paragraph */}
-          <p
-            className="hero-bio-entrance"
-            style={{
-              fontSize: "clamp(1.1rem, 2vw, 1.25rem)",
-              lineHeight: 1.6,
-              color: "var(--text-secondary)",
-              maxWidth: "840px",
-              marginBottom: "36px",
-            }}
-          >
-            I&apos;m <strong style={{ color: "var(--text-primary)", fontWeight: 600 }}>Pankaj Choudhary</strong>,
-            a full-stack developer with 1 year of hands-on experience building production web applications at{" "}
-            <span style={{ color: "var(--text-primary)", fontWeight: 600 }}>Kaspro Solutions</span>.
-            I focus on shipping reliable user interfaces in <span style={{ color: "var(--accent-primary)", fontWeight: 600 }}>Next.js</span> and{" "}
-            <span style={{ color: "var(--accent-primary)", fontWeight: 600 }}>Angular</span>, coupled with structured RESTful APIs and type-safe relational schemas using{" "}
-            <span style={{ color: "var(--accent-primary)", fontWeight: 600 }}>Prisma + MySQL</span>.
-          </p>
-
-          {/* Action CTAs */}
-          <div
-            className="hero-cta-entrance"
-            style={{
-              display: "flex",
-              flexWrap: "wrap",
-              gap: "14px",
-              marginBottom: "48px",
-            }}
-          >
-            <a href="#projects" className="btn btn-primary" style={{ padding: "12px 24px" }}>
-              <span>View Selected Projects</span>
-              <ArrowDown size={16} />
-            </a>
-
-            <a href="#contact" className="btn btn-secondary" style={{ padding: "12px 24px" }}>
-              <span>Contact Directly</span>
-              <ArrowUpRight size={16} />
-            </a>
-
-            <a
-              href="/resume"
-              className="btn"
+            {/* Main Headline */}
+            <AnimatedHeading
+              text="Building practical software, from responsive interface to relational database."
+              as="h1"
+              className="hero-headline-entrance"
               style={{
-                backgroundColor: "var(--bg-surface)",
-                border: "1px dashed var(--border-dark)",
+                fontSize: "clamp(2.25rem, 4.5vw, 3.75rem)",
+                fontWeight: 800,
+                lineHeight: 1.12,
+                letterSpacing: "-0.035em",
                 color: "var(--text-primary)",
-                padding: "12px 20px",
+                marginBottom: "20px",
+              }}
+            />
+
+            {/* Supporting Bio Paragraph */}
+            <p
+              className="hero-bio-entrance"
+              style={{
+                fontSize: "clamp(1rem, 1.8vw, 1.15rem)",
+                lineHeight: 1.6,
+                color: "var(--text-secondary)",
+                maxWidth: "600px",
+                marginBottom: "32px",
               }}
             >
-              <span>View &amp; Print CV</span>
-            </a>
-          </div>
+              I&apos;m <strong style={{ color: "var(--text-primary)", fontWeight: 600 }}>Pankaj Choudhary</strong>,
+              a full-stack developer with 1 year of hands-on experience building production web applications at{" "}
+              <span style={{ color: "var(--text-primary)", fontWeight: 600 }}>Kaspro Solutions</span>.
+              I focus on shipping reliable user interfaces in <span style={{ color: "var(--accent-primary)", fontWeight: 600 }}>Next.js</span> and{" "}
+              <span style={{ color: "var(--accent-primary)", fontWeight: 600 }}>Angular</span>, coupled with structured RESTful APIs and type-safe relational schemas using{" "}
+              <span style={{ color: "var(--accent-primary)", fontWeight: 600 }}>Prisma + MySQL</span>.
+            </p>
 
-          {/* Live Skill Badges */}
-          <div
-            className="hero-skills-entrance"
-            style={{
-              borderTop: "1px solid var(--border-light)",
-              paddingTop: "24px",
-              display: "flex",
-              flexDirection: "column",
-              gap: "14px",
-            }}
-          >
+            {/* Action CTAs */}
             <div
+              className="hero-cta-entrance"
               style={{
                 display: "flex",
-                alignItems: "center",
-                gap: "8px",
-                fontFamily: "var(--font-mono)",
-                fontSize: "0.75rem",
-                color: "var(--text-secondary)",
-                letterSpacing: "0.05em",
-                textTransform: "uppercase",
+                flexWrap: "wrap",
+                gap: "12px",
+                marginBottom: "36px",
               }}
             >
-              <Sparkles size={14} color="var(--accent-primary)" className="subtle-float" />
-              <span>Core Stack &amp; Live Project Competencies</span>
+              <a href="#projects" className="btn btn-primary" style={{ padding: "11px 22px" }}>
+                <span>View Selected Projects</span>
+                <ArrowDown size={15} />
+              </a>
+
+              <a href="#contact" className="btn btn-secondary" style={{ padding: "11px 22px" }}>
+                <span>Contact Directly</span>
+                <ArrowUpRight size={15} />
+              </a>
+
+              <a
+                href="/resume"
+                className="btn"
+                style={{
+                  backgroundColor: "var(--bg-surface)",
+                  border: "1px dashed var(--border-dark)",
+                  color: "var(--text-primary)",
+                  padding: "11px 18px",
+                }}
+              >
+                <span>View &amp; Print CV</span>
+              </a>
             </div>
 
-            <div style={{ display: "flex", flexWrap: "wrap", gap: "8px" }}>
-              {coreSkills.map((skill, index) => (
-                <div
-                  key={skill.name}
-                  style={{
-                    display: "inline-flex",
-                    alignItems: "center",
-                    gap: "8px",
-                    padding: "6px 12px",
-                    backgroundColor: "var(--bg-surface)",
-                    border: "1px solid var(--border-color)",
-                    borderRadius: "var(--radius-sm)",
-                    fontSize: "0.8125rem",
-                    transition: "border-color var(--transition-fast), transform var(--transition-fast)",
-                    opacity: 0,
-                    animation: `skillBadgePop 0.5s cubic-bezier(0.16, 1, 0.3, 1) ${0.8 + index * 0.06}s forwards`,
-                  }}
-                >
-                  <span style={{ fontWeight: 600, color: "var(--text-primary)" }}>{skill.name}</span>
-                  <span
+            {/* Live Skill Badges */}
+            <div
+              className="hero-skills-entrance"
+              style={{
+                borderTop: "1px solid var(--border-light)",
+                paddingTop: "20px",
+                display: "flex",
+                flexDirection: "column",
+                gap: "12px",
+              }}
+            >
+              <div
+                style={{
+                  display: "flex",
+                  alignItems: "center",
+                  gap: "8px",
+                  fontFamily: "var(--font-mono)",
+                  fontSize: "0.72rem",
+                  color: "var(--text-secondary)",
+                  letterSpacing: "0.05em",
+                  textTransform: "uppercase",
+                }}
+              >
+                <Sparkles size={13} color="var(--accent-primary)" className="subtle-float" />
+                <span>Core Stack &amp; Live Project Competencies</span>
+              </div>
+
+              <div style={{ display: "flex", flexWrap: "wrap", gap: "8px" }}>
+                {coreSkills.map((skill, index) => (
+                  <div
+                    key={skill.name}
                     style={{
-                      fontFamily: "var(--font-mono)",
-                      fontSize: "0.6875rem",
-                      color: "var(--accent-primary)",
-                      backgroundColor: "var(--accent-surface)",
-                      padding: "1px 6px",
-                      borderRadius: "2px",
+                      display: "inline-flex",
+                      alignItems: "center",
+                      gap: "7px",
+                      padding: "5px 10px",
+                      backgroundColor: "var(--bg-surface)",
+                      border: "1px solid var(--border-color)",
+                      borderRadius: "var(--radius-sm)",
+                      fontSize: "0.78rem",
+                      transition: "border-color var(--transition-fast), transform var(--transition-fast)",
+                      opacity: 0,
+                      animation: `skillBadgePop 0.5s cubic-bezier(0.16, 1, 0.3, 1) ${0.7 + index * 0.05}s forwards`,
                     }}
                   >
-                    {skill.type}
-                  </span>
-                </div>
-              ))}
+                    <span style={{ fontWeight: 600, color: "var(--text-primary)" }}>{skill.name}</span>
+                    <span
+                      style={{
+                        fontFamily: "var(--font-mono)",
+                        fontSize: "0.6875rem",
+                        color: "var(--accent-primary)",
+                        backgroundColor: "var(--accent-surface)",
+                        padding: "1px 6px",
+                        borderRadius: "2px",
+                      }}
+                    >
+                      {skill.type}
+                    </span>
+                  </div>
+                ))}
+              </div>
             </div>
+          </div>
+
+          {/* Right Column: Hero Architecture Terminal */}
+          <div className="hero-terminal-entrance" style={{ width: "100%" }}>
+            <HeroArchitectureTerminal />
           </div>
         </div>
 
-        {/* Factual Evidence Metrics Row (Restrained, Swiss alignment) */}
+        {/* Factual Evidence Metrics Row */}
         <div
           className="hero-metrics-entrance"
           style={{
@@ -176,18 +194,20 @@ export default function Hero() {
             gap: "1px",
             backgroundColor: "var(--border-color)",
             border: "1px solid var(--border-color)",
-            marginTop: "56px",
+            marginTop: "52px",
             borderRadius: "var(--radius-sm)",
             overflow: "hidden",
+            boxShadow: "var(--card-shadow)",
           }}
         >
-          <div style={{ backgroundColor: "var(--bg-surface)", padding: "20px 24px" }}>
+          <div style={{ backgroundColor: "var(--bg-surface)", padding: "20px 24px", transition: "background-color 0.2s ease" }}>
             <div
               style={{
                 fontFamily: "var(--font-mono)",
-                fontSize: "0.75rem",
+                fontSize: "0.72rem",
                 color: "var(--text-secondary)",
                 marginBottom: "4px",
+                letterSpacing: "0.04em",
               }}
             >
               PRACTICAL TENURE
@@ -207,13 +227,14 @@ export default function Hero() {
             </div>
           </div>
 
-          <div style={{ backgroundColor: "var(--bg-surface)", padding: "20px 24px" }}>
+          <div style={{ backgroundColor: "var(--bg-surface)", padding: "20px 24px", transition: "background-color 0.2s ease" }}>
             <div
               style={{
                 fontFamily: "var(--font-mono)",
-                fontSize: "0.75rem",
+                fontSize: "0.72rem",
                 color: "var(--text-secondary)",
                 marginBottom: "4px",
+                letterSpacing: "0.04em",
               }}
             >
               CURRENT FIRM
@@ -233,13 +254,14 @@ export default function Hero() {
             </div>
           </div>
 
-          <div style={{ backgroundColor: "var(--bg-surface)", padding: "20px 24px" }}>
+          <div style={{ backgroundColor: "var(--bg-surface)", padding: "20px 24px", transition: "background-color 0.2s ease" }}>
             <div
               style={{
                 fontFamily: "var(--font-mono)",
-                fontSize: "0.75rem",
+                fontSize: "0.72rem",
                 color: "var(--text-secondary)",
                 marginBottom: "4px",
+                letterSpacing: "0.04em",
               }}
             >
               DATA MODELING
@@ -259,13 +281,14 @@ export default function Hero() {
             </div>
           </div>
 
-          <div style={{ backgroundColor: "var(--bg-surface)", padding: "20px 24px" }}>
+          <div style={{ backgroundColor: "var(--bg-surface)", padding: "20px 24px", transition: "background-color 0.2s ease" }}>
             <div
               style={{
                 fontFamily: "var(--font-mono)",
-                fontSize: "0.75rem",
+                fontSize: "0.72rem",
                 color: "var(--text-secondary)",
                 marginBottom: "4px",
+                letterSpacing: "0.04em",
               }}
             >
               SPECIALIZATION
@@ -286,6 +309,15 @@ export default function Hero() {
           </div>
         </div>
       </div>
+
+      <style jsx>{`
+        @media (min-width: 980px) {
+          .hero-grid-layout {
+            grid-template-columns: 1.15fr 0.9fr !important;
+            gap: 48px !important;
+          }
+        }
+      `}</style>
     </section>
   );
 }

@@ -1,34 +1,50 @@
 /* ==========================================================================
-   Editorial Minimalism Design System - Pankaj Choudhary Portfolio
+   Soft Modern Full-Stack Engineering Design System - Pankaj Choudhary Portfolio
    ========================================================================== */
 
 :root {
-  /* Editorial Color Palette */
-  --bg-page: #F7F6F2;
+  /* Default: Soft Modern Light Theme (Clean, luminous, gentle on the eyes) */
+  --bg-page: #F8FAFC;
   --bg-surface: #FFFFFF;
-  --bg-subtle: #FAF9F5;
-  --text-primary: #252721;
-  --text-secondary: #73756D;
-  --text-tertiary: #95978F;
-  --border-light: #ECEBE5;
-  --border-color: #DEDED6;
-  --border-dark: #C2C2B8;
+  --bg-surface-glass: rgba(255, 255, 255, 0.88);
+  --bg-subtle: #F1F5F9;
+  --text-primary: #1E293B;
+  --text-secondary: #64748B;
+  --text-tertiary: #94A3B8;
+  --border-light: #F1F5F9;
+  --border-color: #E2E8F0;
+  --border-dark: #CBD5E1;
 
-  /* Accent & Interaction Tokens */
-  --accent-primary: #526B56;
-  --accent-hover: #3F5643;
-  --accent-surface: #E9EEE7;
-  --accent-surface-hover: #DDE5DA;
-  --accent-border: #C6D3C5;
+  /* Soothing, Nature-Inspired Emerald & Cyan Tech Accents */
+  --accent-primary: #0D9488;
+  --accent-hover: #0F766E;
+  --accent-surface: #F0FDF4;
+  --accent-surface-hover: #DCFCE7;
+  --accent-border: #BBF7D0;
+  --accent-glow: rgba(13, 148, 136, 0.12);
 
-  /* Dark Contrast Section Tokens */
-  --dark-bg: #252721;
-  --dark-surface: #2E3129;
-  --dark-surface-subtle: #383B32;
-  --dark-border: #42463C;
-  --dark-text-primary: #F7F6F2;
-  --dark-text-secondary: #B9BBB2;
-  --dark-accent: #789B7D;
+  --secondary-accent: #0284C7;
+  --purple-accent: #8B5CF6;
+
+  /* Soft Ambient Mesh Orb Colors */
+  --orb-1: rgba(13, 148, 136, 0.08);
+  --orb-2: rgba(2, 132, 199, 0.07);
+  --orb-3: rgba(139, 92, 246, 0.06);
+  --grid-dot-color: rgba(148, 163, 184, 0.14);
+  --grid-line-color: rgba(148, 163, 184, 0.04);
+
+  /* Contrast Section Tokens (Soft Slate-Navy, NOT harsh pitch black) */
+  --dark-bg: #1E293B;
+  --dark-surface: #243247;
+  --dark-surface-subtle: #2E3E56;
+  --dark-border: rgba(255, 255, 255, 0.1);
+  --dark-text-primary: #F8FAFC;
+  --dark-text-secondary: #CBD5E1;
+  --dark-accent: #2DD4BF;
+
+  /* Elevation & Cards with Soft Shadows */
+  --card-shadow: 0 4px 20px -2px rgba(100, 116, 139, 0.08), 0 0 0 1px rgba(226, 232, 240, 0.8);
+  --card-hover-shadow: 0 12px 30px -4px rgba(13, 148, 136, 0.14), 0 0 0 1px rgba(13, 148, 136, 0.3);
 
   /* Typography */
   --font-sans: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
@@ -47,12 +63,53 @@
   --space-4xl: 96px;
 
   /* Radii & Transitions */
-  --radius-xs: 2px;
-  --radius-sm: 4px;
-  --radius-md: 6px;
-  --radius-lg: 8px;
+  --radius-xs: 4px;
+  --radius-sm: 8px;
+  --radius-md: 12px;
+  --radius-lg: 16px;
   --transition-fast: 150ms cubic-bezier(0.16, 1, 0.3, 1);
   --transition-normal: 240ms cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+[data-theme="dark"] {
+  /* Optional Dark Mode (Available via toggle) */
+  --bg-page: #0F172A;
+  --bg-surface: #1E293B;
+  --bg-surface-glass: rgba(30, 41, 59, 0.8);
+  --bg-subtle: #273549;
+  --text-primary: #F8FAFC;
+  --text-secondary: #94A3B8;
+  --text-tertiary: #64748B;
+  --border-light: rgba(255, 255, 255, 0.07);
+  --border-color: rgba(255, 255, 255, 0.12);
+  --border-dark: rgba(255, 255, 255, 0.2);
+
+  --accent-primary: #10B981;
+  --accent-hover: #059669;
+  --accent-surface: rgba(16, 185, 129, 0.12);
+  --accent-surface-hover: rgba(16, 185, 129, 0.22);
+  --accent-border: rgba(16, 185, 129, 0.3);
+  --accent-glow: rgba(16, 185, 129, 0.2);
+
+  --secondary-accent: #06B6D4;
+  --purple-accent: #8B5CF6;
+
+  --orb-1: rgba(16, 185, 129, 0.15);
+  --orb-2: rgba(6, 182, 212, 0.12);
+  --orb-3: rgba(139, 92, 246, 0.1);
+  --grid-dot-color: rgba(255, 255, 255, 0.08);
+  --grid-line-color: rgba(255, 255, 255, 0.025);
+
+  --dark-bg: #090D16;
+  --dark-surface: #111827;
+  --dark-surface-subtle: #1F293D;
+  --dark-border: rgba(255, 255, 255, 0.1);
+  --dark-text-primary: #F8FAFC;
+  --dark-text-secondary: #94A3B8;
+  --dark-accent: #34D399;
+
+  --card-shadow: 0 4px 20px -2px rgba(0, 0, 0, 0.4), 0 0 0 1px rgba(255, 255, 255, 0.06);
+  --card-hover-shadow: 0 12px 32px -4px rgba(16, 185, 129, 0.14), 0 0 0 1px rgba(16, 185, 129, 0.3);
 }
 
 /* Base Reset */
@@ -78,6 +135,8 @@ body {
   line-height: 1.6;
   min-height: 100vh;
   overflow-x: hidden;
+  position: relative;
+  transition: background-color 0.3s ease, color 0.3s ease;
 }
 
 /* Typography Utilities */
@@ -142,10 +201,11 @@ button {
 .editorial-label::before {
   content: "";
   display: inline-block;
-  width: 8px;
-  height: 8px;
+  width: 7px;
+  height: 7px;
   background-color: var(--accent-primary);
-  border-radius: 1px;
+  border-radius: 2px;
+  box-shadow: 0 0 6px var(--accent-glow);
 }
 
 .section-header {
@@ -170,7 +230,7 @@ button {
 .editorial-divider {
   border: none;
   height: 1px;
-  background-color: var(--border-color);
+  background: linear-gradient(90deg, transparent, var(--border-color), transparent);
   margin: 64px 0;
 }
 
@@ -199,6 +259,7 @@ button {
 
 .pill:hover {
   border-color: var(--accent-primary);
+  box-shadow: 0 0 10px var(--accent-glow);
 }
 
 /* Primary and Outline Buttons */
@@ -213,40 +274,45 @@ button {
   font-weight: 600;
   letter-spacing: -0.01em;
   transition: all var(--transition-fast);
+  cursor: pointer;
 }
 
 .btn-primary {
   background-color: var(--accent-primary);
   color: #FFFFFF;
   border: 1px solid var(--accent-primary);
+  box-shadow: 0 2px 8px var(--accent-glow);
 }
 
 .btn-primary:hover {
   background-color: var(--accent-hover);
   border-color: var(--accent-hover);
   transform: translateY(-1px);
+  box-shadow: 0 4px 14px var(--accent-glow);
 }
 
 .btn-secondary {
   background-color: var(--bg-surface);
   color: var(--text-primary);
   border: 1px solid var(--border-color);
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.04);
 }
 
 .btn-secondary:hover {
   background-color: var(--bg-subtle);
-  border-color: var(--text-primary);
+  border-color: var(--accent-primary);
+  transform: translateY(-1px);
 }
 
 .btn-dark {
-  background-color: var(--text-primary);
+  background-color: var(--dark-surface);
   color: #FFFFFF;
-  border: 1px solid var(--text-primary);
+  border: 1px solid var(--dark-border);
 }
 
 .btn-dark:hover {
-  background-color: #000000;
-  border-color: #000000;
+  background-color: var(--dark-surface-subtle);
+  border-color: var(--accent-primary);
 }
 
 /* Focus State Accessibility */
@@ -257,8 +323,10 @@ a:focus-visible, button:focus-visible, input:focus-visible, textarea:focus-visib
 
 /* Section Spacing */
 .section-padding {
-  padding-top: 80px;
-  padding-bottom: 80px;
+  padding-top: 84px;
+  padding-bottom: 84px;
+  position: relative;
+  z-index: 1;
 }
 
 @media (max-width: 768px) {
@@ -271,40 +339,59 @@ a:focus-visible, button:focus-visible, input:focus-visible, textarea:focus-visib
   }
 }
 
-/* Subtle Micro-animations */
-@keyframes fadeIn {
-  from {
-    opacity: 0;
-    transform: translateY(10px);
+/* ===== Ambient Luminous Orbs Keyframe Animations ===== */
+@keyframes floatOrb1 {
+  0% {
+    transform: translate(0px, 0px) scale(1);
   }
-  to {
-    opacity: 1;
-    transform: translateY(0);
+  50% {
+    transform: translate(45px, 30px) scale(1.08);
+  }
+  100% {
+    transform: translate(-25px, 50px) scale(0.96);
   }
 }
 
-.animate-fade-in {
-  animation: fadeIn 0.4s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+@keyframes floatOrb2 {
+  0% {
+    transform: translate(0px, 0px) scale(1);
+  }
+  50% {
+    transform: translate(-40px, -45px) scale(1.06);
+  }
+  100% {
+    transform: translate(30px, -25px) scale(0.94);
+  }
 }
 
-/* ===== Hero First-Visit Entrance Animation ===== */
+@keyframes floatOrb3 {
+  0% {
+    transform: translate(0px, 0px) scale(1);
+  }
+  50% {
+    transform: translate(-30px, 35px) scale(1.04);
+  }
+  100% {
+    transform: translate(25px, -15px) scale(0.97);
+  }
+}
+
+/* Hero Entrance Animations */
 @keyframes heroEntrance {
   from {
     opacity: 0;
-    transform: translateY(40px);
-    filter: blur(4px);
+    transform: translateY(24px);
   }
   to {
     opacity: 1;
     transform: translateY(0);
-    filter: blur(0);
   }
 }
 
 @keyframes heroLabelSlide {
   from {
     opacity: 0;
-    transform: translateX(-20px);
+    transform: translateX(-12px);
   }
   to {
     opacity: 1;
@@ -315,7 +402,7 @@ a:focus-visible, button:focus-visible, input:focus-visible, textarea:focus-visib
 @keyframes metricsReveal {
   from {
     opacity: 0;
-    transform: translateY(20px) scale(0.97);
+    transform: translateY(16px) scale(0.98);
   }
   to {
     opacity: 1;
@@ -326,10 +413,10 @@ a:focus-visible, button:focus-visible, input:focus-visible, textarea:focus-visib
 @keyframes skillBadgePop {
   0% {
     opacity: 0;
-    transform: scale(0.85) translateY(8px);
+    transform: scale(0.9) translateY(4px);
   }
-  60% {
-    transform: scale(1.03) translateY(-2px);
+  70% {
+    transform: scale(1.02) translateY(-1px);
   }
   100% {
     opacity: 1;
@@ -337,67 +424,93 @@ a:focus-visible, button:focus-visible, input:focus-visible, textarea:focus-visib
   }
 }
 
-/* Hero entrance classes */
-.hero-entrance {
-  animation: heroEntrance 0.9s cubic-bezier(0.16, 1, 0.3, 1) forwards;
-}
-
 .hero-label-entrance {
   opacity: 0;
-  animation: heroLabelSlide 0.6s cubic-bezier(0.16, 1, 0.3, 1) 0.15s forwards;
+  animation: heroLabelSlide 0.5s cubic-bezier(0.16, 1, 0.3, 1) 0.1s forwards;
 }
 
 .hero-headline-entrance {
   opacity: 0;
-  animation: heroEntrance 0.85s cubic-bezier(0.16, 1, 0.3, 1) 0.25s forwards;
+  animation: heroEntrance 0.7s cubic-bezier(0.16, 1, 0.3, 1) 0.18s forwards;
 }
 
 .hero-bio-entrance {
   opacity: 0;
-  animation: heroEntrance 0.8s cubic-bezier(0.16, 1, 0.3, 1) 0.4s forwards;
+  animation: heroEntrance 0.65s cubic-bezier(0.16, 1, 0.3, 1) 0.3s forwards;
 }
 
 .hero-cta-entrance {
   opacity: 0;
-  animation: heroEntrance 0.75s cubic-bezier(0.16, 1, 0.3, 1) 0.55s forwards;
+  animation: heroEntrance 0.6s cubic-bezier(0.16, 1, 0.3, 1) 0.42s forwards;
 }
 
 .hero-skills-entrance {
   opacity: 0;
-  animation: heroEntrance 0.7s cubic-bezier(0.16, 1, 0.3, 1) 0.65s forwards;
+  animation: heroEntrance 0.55s cubic-bezier(0.16, 1, 0.3, 1) 0.55s forwards;
+}
+
+.hero-terminal-entrance {
+  opacity: 0;
+  animation: heroEntrance 0.75s cubic-bezier(0.16, 1, 0.3, 1) 0.25s forwards;
 }
 
 .hero-metrics-entrance {
   opacity: 0;
-  animation: metricsReveal 0.8s cubic-bezier(0.16, 1, 0.3, 1) 0.8s forwards;
+  animation: metricsReveal 0.7s cubic-bezier(0.16, 1, 0.3, 1) 0.7s forwards;
 }
 
-/* ===== Subtle floating for accent elements ===== */
+/* Floating animation */
 @keyframes subtleFloat {
-  0%, 100% { transform: translateY(0); }
-  50% { transform: translateY(-4px); }
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-6px);
+  }
 }
 
 .subtle-float {
-  animation: subtleFloat 3s ease-in-out infinite;
+  animation: subtleFloat 4s ease-in-out infinite;
 }
 
-/* ===== Prefer reduced motion ===== */
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--bg-page);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--border-color);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--accent-primary);
+}
+
+/* Prefer reduced motion */
 @media (prefers-reduced-motion: reduce) {
   *, *::before, *::after {
     animation-duration: 0.01ms !important;
     animation-iteration-count: 1 !important;
     transition-duration: 0.01ms !important;
   }
+  .ambient-orb, .subtle-float {
+    animation: none !important;
+  }
 }
 
-/* Print Style for Resume Viewing */
+/* Print Style */
 @media print {
   body {
-    background-color: #FFFFFF;
-    color: #000000;
+    background-color: #FFFFFF !important;
+    color: #000000 !important;
   }
-  .no-print {
+  .no-print, [aria-hidden="true"] {
     display: none !important;
   }
 }

@@ -3,6 +3,7 @@
 import React, { useState, useEffect } from "react";
 import { portfolioData } from "@/data/portfolioData";
 import { ArrowUpRight, Menu, X, FileText, Mail } from "lucide-react";
+import ThemeToggle from "./ThemeToggle";
 
 export default function Navigation() {
   const [scrolled, setScrolled] = useState(false);
@@ -31,8 +32,9 @@ export default function Navigation() {
         position: "sticky",
         top: 0,
         zIndex: 50,
-        backgroundColor: scrolled ? "rgba(247, 246, 242, 0.94)" : "var(--bg-page)",
-        backdropFilter: scrolled ? "blur(8px)" : "none",
+        backgroundColor: scrolled ? "var(--bg-surface-glass)" : "transparent",
+        backdropFilter: scrolled ? "blur(16px)" : "none",
+        WebkitBackdropFilter: scrolled ? "blur(16px)" : "none",
         borderBottom: `1px solid ${scrolled ? "var(--border-color)" : "transparent"}`,
         transition: "all var(--transition-fast)",
       }}
@@ -44,6 +46,7 @@ export default function Navigation() {
           alignItems: "center",
           justifyContent: "space-between",
           height: "72px",
+          gap: "16px",
         }}
       >
         {/* Brand / Name & Status */}
@@ -54,6 +57,7 @@ export default function Navigation() {
             alignItems: "center",
             gap: "12px",
             textDecoration: "none",
+            flexShrink: 0,
           }}
         >
           <span
@@ -69,6 +73,7 @@ export default function Navigation() {
           </span>
 
           <span
+            className="nav-badge"
             style={{
               display: "inline-flex",
               alignItems: "center",
@@ -89,6 +94,7 @@ export default function Navigation() {
                 height: "6px",
                 borderRadius: "50%",
                 backgroundColor: "var(--accent-primary)",
+                boxShadow: "0 0 6px var(--accent-primary)",
               }}
             />
             1 YR EXP · FULL-STACK
@@ -100,7 +106,7 @@ export default function Navigation() {
           style={{
             display: "none",
             alignItems: "center",
-            gap: "28px",
+            gap: "24px",
           }}
           className="desktop-nav"
         >
@@ -123,15 +129,18 @@ export default function Navigation() {
           ))}
         </nav>
 
-        {/* Actions (Resume & Contact) */}
+        {/* Actions (Theme Toggle, Resume & Contact) */}
         <div
           style={{
             display: "none",
             alignItems: "center",
-            gap: "12px",
+            gap: "10px",
+            flexShrink: 0,
           }}
           className="desktop-actions"
         >
+          <ThemeToggle />
+
           <a
             href="/resume"
             className="btn btn-secondary"
@@ -151,25 +160,31 @@ export default function Navigation() {
           </a>
         </div>
 
-        {/* Mobile Menu Button */}
-        <button
-          onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-          style={{
-            display: "flex",
-            alignItems: "center",
-            justifyContent: "center",
-            width: "40px",
-            height: "40px",
-            color: "var(--text-primary)",
-            borderRadius: "var(--radius-sm)",
-            border: "1px solid var(--border-color)",
-            backgroundColor: "var(--bg-surface)",
-          }}
-          className="mobile-toggle"
-          aria-label="Toggle navigation menu"
-        >
-          {mobileMenuOpen ? <X size={20} /> : <Menu size={20} />}
-        </button>
+        {/* Mobile Header Controls */}
+        <div style={{ display: "flex", alignItems: "center", gap: "8px" }} className="mobile-controls">
+          <span className="mobile-theme-wrapper">
+            <ThemeToggle />
+          </span>
+
+          <button
+            onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
+            style={{
+              display: "flex",
+              alignItems: "center",
+              justifyContent: "center",
+              width: "40px",
+              height: "40px",
+              color: "var(--text-primary)",
+              borderRadius: "var(--radius-sm)",
+              border: "1px solid var(--border-color)",
+              backgroundColor: "var(--bg-surface)",
+            }}
+            className="mobile-toggle"
+            aria-label="Toggle navigation menu"
+          >
+            {mobileMenuOpen ? <X size={20} /> : <Menu size={20} />}
+          </button>
+        </div>
       </div>
 
       {/* Mobile Menu Dropdown */}
@@ -231,14 +246,22 @@ export default function Navigation() {
       )}
 
       <style jsx>{`
-        @media (min-width: 860px) {
+        .nav-badge {
+          display: none !important;
+        }
+        @media (min-width: 1120px) {
+          .nav-badge {
+            display: inline-flex !important;
+          }
+        }
+        @media (min-width: 980px) {
           .desktop-nav {
             display: flex !important;
           }
           .desktop-actions {
             display: flex !important;
           }
-          .mobile-toggle {
+          .mobile-controls {
             display: none !important;
           }
         }

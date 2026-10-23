@@ -1,4 +1,5 @@
 import Navigation from "@/components/Navigation";
+import InteractiveBackground from "@/components/InteractiveBackground";
 import Hero from "@/components/Hero";
 import ProjectsSection from "@/components/ProjectsSection";
 import ExperienceSection from "@/components/ExperienceSection";
@@ -10,9 +11,10 @@ import Footer from "@/components/Footer";
 
 export default function Home() {
   return (
-    <div style={{ minHeight: "100vh", display: "flex", flexDirection: "column" }}>
+    <div style={{ minHeight: "100vh", display: "flex", flexDirection: "column", position: "relative" }}>
+      <InteractiveBackground />
       <Navigation />
-      <main style={{ flex: 1 }}>
+      <main style={{ flex: 1, position: "relative", zIndex: 1 }}>
         <Hero />
         <ProjectsSection />
         <ExperienceSection />
