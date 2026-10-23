@@ -4,12 +4,17 @@ import React, { useState } from "react";
 import { portfolioData } from "@/data/portfolioData";
 import { ArrowUpRight, Check, Copy, FileText, Mail, MapPin, Phone, Send } from "lucide-react";
 import { GithubIcon, LinkedinIcon } from "./BrandIcons";
+import { useScrollAnimation, getRevealStyle, getStaggerStyle } from "@/hooks/useScrollAnimation";
+import AnimatedHeading from "./AnimatedHeading";
 
 export default function ContactSection() {
   const { personal } = portfolioData;
   const [copied, setCopied] = useState(false);
   const [subject, setSubject] = useState("");
   const [message, setMessage] = useState("");
+
+  const { ref: leftColRef, isVisible: leftColVisible } = useScrollAnimation();
+  const { ref: formRef, isVisible: formVisible } = useScrollAnimation({ rootMargin: "0px 0px -40px 0px" });
 
   const handleCopyEmail = () => {
     navigator.clipboard.writeText(personal.email);
@@ -36,41 +41,43 @@ export default function ContactSection() {
           }}
         >
           {/* Column 1: Invitation & Verified Direct Contacts */}
-          <div>
-            <div className="editorial-label">GET IN TOUCH</div>
-            <h2
-              style={{
-                fontSize: "clamp(2rem, 4vw, 2.75rem)",
-                fontWeight: 800,
-                color: "var(--text-primary)",
-                lineHeight: 1.15,
-                letterSpacing: "-0.025em",
-                marginBottom: "16px",
-              }}
-            >
-              Have a role where I could contribute?
-            </h2>
+          <div ref={leftColRef}>
+            <div style={getRevealStyle(leftColVisible, 0)}>
+              <div className="editorial-label">GET IN TOUCH</div>
+              <AnimatedHeading
+                text="Have a role where I could contribute?"
+                style={{
+                  fontSize: "clamp(2rem, 4vw, 2.75rem)",
+                  fontWeight: 800,
+                  color: "var(--text-primary)",
+                  lineHeight: 1.15,
+                  letterSpacing: "-0.025em",
+                  marginBottom: "16px",
+                }}
+              />
 
-            <p
-              style={{
-                fontSize: "1.0625rem",
-                color: "var(--text-secondary)",
-                lineHeight: 1.6,
-                marginBottom: "32px",
-              }}
-            >
-              I am actively seeking software developer opportunities where I can apply my full-stack skills
-              in <strong style={{ color: "var(--text-primary)" }}>Next.js</strong>,{" "}
-              <strong style={{ color: "var(--text-primary)" }}>Angular</strong>,{" "}
-              <strong style={{ color: "var(--text-primary)" }}>Node.js</strong>, and{" "}
-              <strong style={{ color: "var(--text-primary)" }}>Prisma + MySQL</strong> to build reliable production applications.
-            </p>
+              <p
+                style={{
+                  fontSize: "1.0625rem",
+                  color: "var(--text-secondary)",
+                  lineHeight: 1.6,
+                  marginBottom: "32px",
+                }}
+              >
+                I am actively seeking software developer opportunities where I can apply my full-stack skills
+                in <strong style={{ color: "var(--text-primary)" }}>Next.js</strong>,{" "}
+                <strong style={{ color: "var(--text-primary)" }}>Angular</strong>,{" "}
+                <strong style={{ color: "var(--text-primary)" }}>Node.js</strong>, and{" "}
+                <strong style={{ color: "var(--text-primary)" }}>Prisma + MySQL</strong> to build reliable production applications.
+              </p>
+            </div>
 
             {/* Direct Contact Cards */}
             <div style={{ display: "flex", flexDirection: "column", gap: "14px", marginBottom: "32px" }}>
               {/* Email Card with Copy Action */}
               <div
                 style={{
+                  ...getStaggerStyle(leftColVisible, 0, 0.15, 0.1),
                   display: "flex",
                   alignItems: "center",
                   justifyContent: "space-between",
@@ -131,6 +138,7 @@ export default function ContactSection() {
               {/* Phone / WhatsApp Card */}
               <div
                 style={{
+                  ...getStaggerStyle(leftColVisible, 1, 0.15, 0.1),
                   display: "flex",
                   alignItems: "center",
                   padding: "14px 18px",
@@ -170,6 +178,7 @@ export default function ContactSection() {
               {/* Location Card */}
               <div
                 style={{
+                  ...getStaggerStyle(leftColVisible, 2, 0.15, 0.1),
                   display: "flex",
                   alignItems: "center",
                   padding: "14px 18px",
@@ -201,7 +210,7 @@ export default function ContactSection() {
             </div>
 
             {/* Social & Resume Links */}
-            <div style={{ display: "flex", flexWrap: "wrap", gap: "10px" }}>
+            <div style={{ ...getRevealStyle(leftColVisible, 0.45), display: "flex", flexWrap: "wrap", gap: "10px" }}>
               <a
                 href={personal.github}
                 target="_blank"
@@ -239,7 +248,9 @@ export default function ContactSection() {
 
           {/* Column 2: Direct Email Dispatch Form (Opens Native Client Cleanly) */}
           <div
+            ref={formRef}
             style={{
+              ...getRevealStyle(formVisible, 0.1, "right"),
               backgroundColor: "var(--bg-surface)",
               border: "1px solid var(--border-color)",
               borderRadius: "var(--radius-md)",

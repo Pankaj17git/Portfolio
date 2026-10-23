@@ -4,6 +4,8 @@ import React, { useState } from "react";
 import { portfolioData, Project } from "@/data/portfolioData";
 import { ArrowUpRight, CheckCircle2, ChevronRight, Eye, Layers } from "lucide-react";
 import ProjectDetailModal from "./ProjectDetailModal";
+import { useScrollAnimation, getRevealStyle, getStaggerStyle } from "@/hooks/useScrollAnimation";
+import AnimatedHeading from "./AnimatedHeading";
 
 export default function ProjectsSection() {
   const [selectedFilter, setSelectedFilter] = useState("all");
@@ -29,12 +31,18 @@ export default function ProjectsSection() {
   const featuredProject = projects.find((p) => p.featured) || projects[0];
   const supportingProjects = projects.filter((p) => p.id !== featuredProject.id);
 
+  const { ref: headerRef, isVisible: headerVisible } = useScrollAnimation();
+  const { ref: featuredRef, isVisible: featuredVisible } = useScrollAnimation({ rootMargin: "0px 0px -40px 0px" });
+  const { ref: gridRef, isVisible: gridVisible } = useScrollAnimation({ rootMargin: "0px 0px -40px 0px" });
+
   return (
     <section id="projects" className="section-padding" style={{ borderBottom: "1px solid var(--border-color)" }}>
       <div className="container">
         {/* Section Header */}
         <div
+          ref={headerRef}
           style={{
+            ...getRevealStyle(headerVisible, 0),
             display: "flex",
             flexDirection: "column",
             gap: "8px",
@@ -52,7 +60,7 @@ export default function ProjectsSection() {
             }}
           >
             <div>
-              <h2 className="section-title">Selected Engineering Projects</h2>
+              <AnimatedHeading text="Selected Engineering Projects" className="section-title" />
               <p className="section-subtitle">
                 Demonstrating practical experience across frontend architectures, transactional backend logic,
                 and relational database modeling.
@@ -95,7 +103,9 @@ export default function ProjectsSection() {
         {/* FEATURED PROJECT: Editorial Highlight (WorkHub) */}
         {selectedFilter === "all" || filteredProjects.some((p) => p.id === featuredProject.id) ? (
           <div
+            ref={featuredRef}
             style={{
+              ...getRevealStyle(featuredVisible, 0.05, "scale"),
               backgroundColor: "var(--bg-surface)",
               border: "1px solid var(--border-color)",
               borderRadius: "var(--radius-md)",
@@ -215,6 +225,7 @@ export default function ProjectsSection() {
                         <li
                           key={idx}
                           style={{
+                            ...getStaggerStyle(featuredVisible, idx, 0.2, 0.08),
                             display: "flex",
                             alignItems: "flex-start",
                             gap: "8px",
@@ -351,6 +362,7 @@ export default function ProjectsSection() {
 
         {/* SUPPORTING PROJECTS: 2-Column Varied Editorial Grid */}
         <div
+          ref={gridRef}
           style={{
             display: "grid",
             gridTemplateColumns: "repeat(auto-fit, minmax(360px, 1fr))",
@@ -363,10 +375,11 @@ export default function ProjectsSection() {
               if (selectedFilter === "all") return true;
               return filteredProjects.some((fp) => fp.id === p.id);
             })
-            .map((project) => (
+            .map((project, pIdx) => (
               <div
                 key={project.id}
                 style={{
+                  ...getStaggerStyle(gridVisible, pIdx, 0.05, 0.12),
                   backgroundColor: "var(--bg-surface)",
                   border: "1px solid var(--border-color)",
                   borderRadius: "var(--radius-md)",

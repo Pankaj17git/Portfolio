@@ -3,14 +3,18 @@
 import React from "react";
 import { portfolioData } from "@/data/portfolioData";
 import { ArrowUp } from "lucide-react";
+import { useScrollAnimation, getRevealStyle } from "@/hooks/useScrollAnimation";
 
 export default function Footer() {
   const scrollToTop = () => {
     window.scrollTo({ top: 0, behavior: "smooth" });
   };
 
+  const { ref: footerRef, isVisible: footerVisible } = useScrollAnimation({ threshold: 0.05 });
+
   return (
     <footer
+      ref={footerRef}
       style={{
         backgroundColor: "var(--bg-page)",
         borderTop: "1px solid var(--border-color)",
@@ -20,6 +24,7 @@ export default function Footer() {
       <div className="container">
         <div
           style={{
+            ...getRevealStyle(footerVisible, 0),
             display: "flex",
             flexWrap: "wrap",
             justifyContent: "space-between",
@@ -100,6 +105,7 @@ export default function Footer() {
         {/* Sub-footer metadata */}
         <div
           style={{
+            ...getRevealStyle(footerVisible, 0.15),
             display: "flex",
             flexWrap: "wrap",
             justifyContent: "space-between",

@@ -3,17 +3,22 @@
 import React from "react";
 import { portfolioData } from "@/data/portfolioData";
 import { Briefcase, Calendar, CheckCircle2, ChevronRight, MapPin } from "lucide-react";
+import { useScrollAnimation, getRevealStyle, getStaggerStyle } from "@/hooks/useScrollAnimation";
+import AnimatedHeading from "./AnimatedHeading";
 
 export default function ExperienceSection() {
   const { experience } = portfolioData;
+
+  const { ref: headerRef, isVisible: headerVisible } = useScrollAnimation();
+  const { ref: cardsRef, isVisible: cardsVisible } = useScrollAnimation({ rootMargin: "0px 0px -40px 0px" });
 
   return (
     <section id="experience" className="section-padding" style={{ borderBottom: "1px solid var(--border-color)" }}>
       <div className="container">
         {/* Section Header */}
-        <div className="section-header">
+        <div className="section-header" ref={headerRef} style={getRevealStyle(headerVisible, 0)}>
           <div className="editorial-label">TRACK RECORD</div>
-          <h2 className="section-title">Professional Experience</h2>
+          <AnimatedHeading text="Professional Experience" className="section-title" />
           <p className="section-subtitle">
             One year of continuous engineering experience contributing to production codebases,
             participating in agile sprint routines, and shipping features end-to-end.
@@ -21,11 +26,12 @@ export default function ExperienceSection() {
         </div>
 
         {/* Experience Editorial Cards */}
-        <div style={{ display: "flex", flexDirection: "column", gap: "32px" }}>
+        <div ref={cardsRef} style={{ display: "flex", flexDirection: "column", gap: "32px" }}>
           {experience.map((exp, idx) => (
             <div
               key={idx}
               style={{
+                ...getStaggerStyle(cardsVisible, idx, 0.1, 0.15),
                 backgroundColor: "var(--bg-surface)",
                 border: "1px solid var(--border-color)",
                 borderRadius: "var(--radius-md)",
@@ -165,6 +171,7 @@ export default function ExperienceSection() {
                     <div
                       key={hIdx}
                       style={{
+                        ...getStaggerStyle(cardsVisible, hIdx, 0.3, 0.05),
                         display: "flex",
                         alignItems: "flex-start",
                         gap: "10px",

@@ -3,6 +3,7 @@
 import React from "react";
 import { portfolioData } from "@/data/portfolioData";
 import { ArrowDown, ArrowUpRight, CheckCircle2, Code2, Database, Layers, Sparkles } from "lucide-react";
+import AnimatedHeading from "./AnimatedHeading";
 
 export default function Hero() {
   const { personal } = portfolioData;
@@ -30,12 +31,15 @@ export default function Hero() {
       <div className="container">
         <div style={{ maxWidth: "980px" }}>
           {/* Editorial Category Label */}
-          <div className="editorial-label">
+          <div className="editorial-label hero-label-entrance">
             SOFTWARE DEVELOPER · 1 YEAR OF LIVE PRODUCTION WORK
           </div>
 
           {/* Main Editorial Headline */}
-          <h1
+          <AnimatedHeading
+            text="Building practical software, from responsive interface to relational database."
+            as="h1"
+            className="hero-headline-entrance"
             style={{
               fontSize: "clamp(2.5rem, 5.5vw, 4.25rem)",
               fontWeight: 800,
@@ -44,12 +48,11 @@ export default function Hero() {
               color: "var(--text-primary)",
               marginBottom: "24px",
             }}
-          >
-            Building practical software, from responsive interface to relational database.
-          </h1>
+          />
 
           {/* Supporting Bio Paragraph */}
           <p
+            className="hero-bio-entrance"
             style={{
               fontSize: "clamp(1.1rem, 2vw, 1.25rem)",
               lineHeight: 1.6,
@@ -68,6 +71,7 @@ export default function Hero() {
 
           {/* Action CTAs */}
           <div
+            className="hero-cta-entrance"
             style={{
               display: "flex",
               flexWrap: "wrap",
@@ -101,6 +105,7 @@ export default function Hero() {
 
           {/* Live Skill Badges */}
           <div
+            className="hero-skills-entrance"
             style={{
               borderTop: "1px solid var(--border-light)",
               paddingTop: "24px",
@@ -121,12 +126,12 @@ export default function Hero() {
                 textTransform: "uppercase",
               }}
             >
-              <Sparkles size={14} color="var(--accent-primary)" />
+              <Sparkles size={14} color="var(--accent-primary)" className="subtle-float" />
               <span>Core Stack &amp; Live Project Competencies</span>
             </div>
 
             <div style={{ display: "flex", flexWrap: "wrap", gap: "8px" }}>
-              {coreSkills.map((skill) => (
+              {coreSkills.map((skill, index) => (
                 <div
                   key={skill.name}
                   style={{
@@ -138,7 +143,9 @@ export default function Hero() {
                     border: "1px solid var(--border-color)",
                     borderRadius: "var(--radius-sm)",
                     fontSize: "0.8125rem",
-                    transition: "border-color var(--transition-fast)",
+                    transition: "border-color var(--transition-fast), transform var(--transition-fast)",
+                    opacity: 0,
+                    animation: `skillBadgePop 0.5s cubic-bezier(0.16, 1, 0.3, 1) ${0.8 + index * 0.06}s forwards`,
                   }}
                 >
                   <span style={{ fontWeight: 600, color: "var(--text-primary)" }}>{skill.name}</span>
@@ -162,6 +169,7 @@ export default function Hero() {
 
         {/* Factual Evidence Metrics Row (Restrained, Swiss alignment) */}
         <div
+          className="hero-metrics-entrance"
           style={{
             display: "grid",
             gridTemplateColumns: "repeat(auto-fit, minmax(220px, 1fr))",

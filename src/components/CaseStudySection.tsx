@@ -3,9 +3,15 @@
 import React from "react";
 import { portfolioData } from "@/data/portfolioData";
 import { ArrowRight, CheckCircle2, ChevronRight, Cpu, GitCommit, Layers, ShieldCheck } from "lucide-react";
+import { useScrollAnimation, getRevealStyle, getStaggerStyle } from "@/hooks/useScrollAnimation";
+import AnimatedHeading from "./AnimatedHeading";
 
 export default function CaseStudySection() {
   const { caseStudy } = portfolioData;
+
+  const { ref: headerRef, isVisible: headerVisible } = useScrollAnimation();
+  const { ref: leftColRef, isVisible: leftColVisible } = useScrollAnimation({ rootMargin: "0px 0px -40px 0px" });
+  const { ref: rightColRef, isVisible: rightColVisible } = useScrollAnimation({ rootMargin: "0px 0px -40px 0px" });
 
   return (
     <section
@@ -18,7 +24,7 @@ export default function CaseStudySection() {
     >
       <div className="container">
         {/* Section Header with Dark Palette Tokens */}
-        <div style={{ maxWidth: "860px", marginBottom: "48px" }}>
+        <div ref={headerRef} style={{ ...getRevealStyle(headerVisible, 0), maxWidth: "860px", marginBottom: "48px" }}>
           <div
             style={{
               display: "inline-flex",
@@ -44,7 +50,8 @@ export default function CaseStudySection() {
             ENGINEERING CASE STUDY
           </div>
 
-          <h2
+          <AnimatedHeading
+            text={caseStudy.title}
             style={{
               fontSize: "clamp(2rem, 4vw, 2.75rem)",
               fontWeight: 800,
@@ -53,9 +60,7 @@ export default function CaseStudySection() {
               lineHeight: 1.15,
               marginBottom: "16px",
             }}
-          >
-            {caseStudy.title}
-          </h2>
+          />
 
           <div
             style={{
@@ -79,7 +84,9 @@ export default function CaseStudySection() {
         >
           {/* Column 1: Context & The Specific Engineering Challenge */}
           <div
+            ref={leftColRef}
             style={{
+              ...getRevealStyle(leftColVisible, 0.1, "left"),
               backgroundColor: "var(--dark-surface)",
               border: "1px solid var(--dark-border)",
               borderRadius: "var(--radius-md)",
@@ -174,7 +181,9 @@ export default function CaseStudySection() {
 
           {/* Column 2: The Step-by-Step Approach & Concrete Results */}
           <div
+            ref={rightColRef}
             style={{
+              ...getRevealStyle(rightColVisible, 0.15, "right"),
               backgroundColor: "var(--dark-surface)",
               border: "1px solid var(--dark-border)",
               borderRadius: "var(--radius-md)",
@@ -203,6 +212,7 @@ export default function CaseStudySection() {
                   <div
                     key={idx}
                     style={{
+                      ...getStaggerStyle(rightColVisible, idx, 0.2, 0.08),
                       display: "flex",
                       alignItems: "flex-start",
                       gap: "12px",
@@ -243,6 +253,7 @@ export default function CaseStudySection() {
             {/* Outcome & Takeaway */}
             <div
               style={{
+                ...getRevealStyle(rightColVisible, 0.5, "scale"),
                 backgroundColor: "var(--dark-bg)",
                 border: "1px solid var(--dark-accent)",
                 borderRadius: "var(--radius-sm)",

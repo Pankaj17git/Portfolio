@@ -3,17 +3,24 @@
 import React from "react";
 import { portfolioData } from "@/data/portfolioData";
 import { Award, BookOpen, Check, Compass, GraduationCap, Laptop, Sparkles } from "lucide-react";
+import { useScrollAnimation, getRevealStyle, getStaggerStyle } from "@/hooks/useScrollAnimation";
+import AnimatedHeading from "./AnimatedHeading";
 
 export default function AboutSection() {
   const { education, engineeringApproach } = portfolioData;
+
+  const { ref: sectionRef, isVisible: sectionVisible } = useScrollAnimation();
+  const { ref: narrativeRef, isVisible: narrativeVisible } = useScrollAnimation({ rootMargin: "0px 0px -40px 0px" });
+  const { ref: educationRef, isVisible: educationVisible } = useScrollAnimation({ rootMargin: "0px 0px -40px 0px" });
+  const { ref: principlesRef, isVisible: principlesVisible } = useScrollAnimation({ rootMargin: "0px 0px -40px 0px" });
 
   return (
     <section id="about" className="section-padding" style={{ borderBottom: "1px solid var(--border-color)" }}>
       <div className="container">
         {/* Section Header */}
-        <div className="section-header">
+        <div className="section-header" ref={sectionRef} style={getRevealStyle(sectionVisible, 0)}>
           <div className="editorial-label">ENGINEERING PROFILE</div>
-          <h2 className="section-title">About Pankaj Choudhary</h2>
+          <AnimatedHeading text="About Pankaj Choudhary" className="section-title" />
           <p className="section-subtitle">
             An early-career software engineer driven by practical problem solving, clean state boundaries,
             and shipping dependable web applications.
@@ -32,7 +39,9 @@ export default function AboutSection() {
           {/* Column 1: Authentic Narrative */}
           <div style={{ display: "flex", flexDirection: "column", gap: "24px" }}>
             <div
+              ref={narrativeRef}
               style={{
+                ...getRevealStyle(narrativeVisible, 0.1),
                 backgroundColor: "var(--bg-surface)",
                 border: "1px solid var(--border-color)",
                 borderRadius: "var(--radius-md)",
@@ -76,7 +85,9 @@ export default function AboutSection() {
 
             {/* Academic Credentials */}
             <div
+              ref={educationRef}
               style={{
+                ...getRevealStyle(educationVisible, 0.15),
                 backgroundColor: "var(--bg-surface)",
                 border: "1px solid var(--border-color)",
                 borderRadius: "var(--radius-md)",
@@ -102,6 +113,7 @@ export default function AboutSection() {
                   <div
                     key={idx}
                     style={{
+                      ...getStaggerStyle(educationVisible, idx, 0.2, 0.1),
                       borderBottom: idx !== education.length - 1 ? "1px solid var(--border-light)" : "none",
                       paddingBottom: idx !== education.length - 1 ? "16px" : 0,
                     }}
@@ -148,7 +160,9 @@ export default function AboutSection() {
 
           {/* Column 2: Engineering Approach Principles */}
           <div
+            ref={principlesRef}
             style={{
+              ...getRevealStyle(principlesVisible, 0.1, "right"),
               backgroundColor: "var(--bg-surface)",
               border: "1px solid var(--border-color)",
               borderRadius: "var(--radius-md)",
@@ -181,7 +195,15 @@ export default function AboutSection() {
 
             <div style={{ display: "flex", flexDirection: "column", gap: "24px" }}>
               {engineeringApproach.map((item, idx) => (
-                <div key={idx} style={{ display: "flex", alignItems: "flex-start", gap: "14px" }}>
+                <div
+                  key={idx}
+                  style={{
+                    ...getStaggerStyle(principlesVisible, idx, 0.15, 0.1),
+                    display: "flex",
+                    alignItems: "flex-start",
+                    gap: "14px",
+                  }}
+                >
                   <div
                     style={{
                       width: "28px",
